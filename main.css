@@ -9,27 +9,23 @@ body {
 
 header {
   display: flex;
-  border: solid red;
 }
 
 header img {
   flex: auto;
   max-width: 192px;
   max-height: 88px;
-  border: dotted blue;
 }
 
 ul {
   flex: auto;
   align-items: flex-end;
   list-style: none;
-  border: solid black;
   display: flex;
 }
 
 li {
   flex: auto;
-  border: dotted blue;
   text-align: right;
 }
 
@@ -43,7 +39,6 @@ a {
 .article-container {
   display: flex;
   padding: 5% 0;
-  border: solid green;
 }
 
 article {
@@ -78,19 +73,21 @@ p {
 
 @media all and (min-width: 701px) and (max-width: 1000px) {
   header { flex-direction: column; }
-  ul { display: inline; padding: 0; }
-  li { text-align: left; }
+  li { text-align: center; }
 }
 
 @media screen and (max-width: 700px) {
-  body { margin: 1%; }
+  body { margin: 0; }
   .main-image { display: none; }
   .article-container { display: inline-block; }
   header { flex-direction: column; }
+  ul { padding: 0 15% }
+  li { text-align: center; }
 }
 
-@media all and (max-width: 414px) {
+@media all and (max-width: 550px) {
+  body { margin: 0 1%; }
   header { flex-direction: column; align-items: flex-start; }
-  ul { display: inline; padding: 0; }
+  ul { display: inline; padding: 0 2%; }
   li { text-align: left; }
 }
